@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +13,19 @@ function Navbar() {
       <div className="flex items-center justify-between space-x-20 my-6">
         {/* logo */}
         <div className="z-30">
-          <h5 id="logo">MealsDay</h5>
+          <Link to="/" id="logo" className="tracking-widest ">
+            <h5 id="logo">MealsDay</h5>
+          </Link>
         </div>
         {/* Menu Items */}
         <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
-          <a href="#home" className="tracking-widest hover:text-softRed">
+          <Link to="/" className="tracking-widest hover:text-softRed">
             Home |
-          </a>
-          <a href="#about" className="tracking-widest hover:text-softRed">
+          </Link>
+          <Link to="/about" className="tracking-widest hover:text-softRed">
             About |
-          </a>
+          </Link>
+
           <a href="#services" className="tracking-widest hover:text-softRed">
             Services |
           </a>
