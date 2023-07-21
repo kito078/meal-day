@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         softBlue: "#2bbef9",
         softRed: "#ed174a",
+        softBlueWhite: "#ffffff",
         grayishBlue: "hsl(229, 8%, 60%)",
         veryDarkBlue: "hsl(226, 31%, 21%)",
       },
