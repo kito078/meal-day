@@ -8,6 +8,15 @@ html{
     font-size: 62.5%;
 }
 
+h2{
+    font-size: 3rem !important;
+}
+
+p{
+    font-size: 2rem !important;
+}
+
+
 body{
     background: #f2f2f2 !important;
 }

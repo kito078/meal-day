@@ -8,6 +8,7 @@ module.exports = {
       lg: "1020px",
       xl: "1440px",
     },
+
     extend: {
       colors: {
         softBlue: "#2bbef9",
