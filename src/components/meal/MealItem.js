@@ -3,7 +3,7 @@ import "./MealItem.css";
 import { Link } from "react-router-dom";
 
 function MealItem({ mealData }) {
-  const { strCategory, strMealThumb, strInstructions } = mealData;
+  const { strCategory, strMealThumb, strInstructions, idMeal } = mealData;
 
   //split the sentence into an array of words
   const wordsArray = strInstructions.split(" ");
@@ -18,7 +18,7 @@ function MealItem({ mealData }) {
   const cutSentence = cutWordsArray.join(" ");
 
   return (
-    <Link to={`meals/${id}`}>
+    <Link to={`meals/${idMeal}`}>
       <div className="rounded-extra  shadow-sm max-w-sm  bg-softBlueWhite">
         <div className=" max-w-sm  ">
           <img className="w-full h-80 " src={strMealThumb} alt="" />
