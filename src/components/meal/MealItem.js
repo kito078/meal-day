@@ -21,7 +21,7 @@ function MealItem({ mealData }) {
       <div className=" max-w-sm  ">
         <img className="w-full h-80 " src={strMealThumb} alt="" />
       </div>
-      <h3 className="text-6xl font-bold">{strCategory}</h3>
+      <h3 className="text-4xl font-bold">{strCategory}</h3>
       <p>{cutSentence}</p>
     </div>
   );
