@@ -32,11 +32,15 @@ export const MealProvider = ({ children }) => {
         console.error("error in fetching  data", error);
       });
 
-    const setLoading = () => {
+    setTimeout(() => {
+      setLoading();
+    }, 1000);
+
+    function setLoading() {
       dispatch({
         type: "SET_LOADING",
       });
-    };
+    }
   };
 
   return (
