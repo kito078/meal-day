@@ -1,5 +1,6 @@
 import React from "react";
 import "./MealItem.css";
+import { Link } from "react-router-dom";
 
 function MealItem({ mealData }) {
   const { strCategory, strMealThumb, strInstructions } = mealData;
@@ -17,13 +18,15 @@ function MealItem({ mealData }) {
   const cutSentence = cutWordsArray.join(" ");
 
   return (
-    <div className="rounded-extra  shadow-sm max-w-sm  bg-softBlueWhite">
-      <div className=" max-w-sm  ">
-        <img className="w-full h-80 " src={strMealThumb} alt="" />
+    <Link to={`meals/${id}`}>
+      <div className="rounded-extra  shadow-sm max-w-sm  bg-softBlueWhite">
+        <div className=" max-w-sm  ">
+          <img className="w-full h-80 " src={strMealThumb} alt="" />
+        </div>
+        <h3 className="text-4xl font-bold">{strCategory}</h3>
+        <p>{cutSentence}</p>
       </div>
-      <h3 className="text-4xl font-bold">{strCategory}</h3>
-      <p>{cutSentence}</p>
-    </div>
+    </Link>
   );
 }
 
