@@ -39,11 +39,12 @@ export const MealProvider = ({ children }) => {
     axios
       .get(`${process.env.REACT_APP_MEAL_URL}/lookup.php?i=52772`)
       .then((response) => {
-        const data = response.data.meals.map((item) => item);
-        dispatch({
-          type: "GET_MEAL",
-          payload: data,
-        });
+        const data = response.data.meals.map((item) =>
+          dispatch({
+            type: "GET_MEAL",
+            payload: item,
+          })
+        );
       })
       .catch((error) => {
         console.error("error in fetching  data", error);

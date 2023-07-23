@@ -5,7 +5,7 @@ import MealContext from "../hooks/MealContext";
 
 function Meals() {
   const { meal, getMeal } = useContext(MealContext);
-  //console.log(meal);
+  console.log(meal);
 
   const params = useParams();
 
@@ -13,9 +13,13 @@ function Meals() {
     getMeal(params.idMeal);
   }, []);
 
-  const {} = meal;
+  const { strInstructions } = meal;
 
-  return <div>meal</div>;
+  return (
+    <div>
+      <p>{strInstructions}</p>
+    </div>
+  );
 }
 
 export default Meals;
