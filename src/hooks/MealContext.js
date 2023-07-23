@@ -40,7 +40,8 @@ export const MealProvider = ({ children }) => {
       .get(`${process.env.REACT_APP_MEAL_URL}/search.php?s=chicken`)
       .then((response) => {
         const data = response.data.meals;
-        const dataList = data.map((item) => console.log("list"));
+        const dataList = data.map((item) => item);
+        console.log(dataList);
 
         dispatch({
           type: "GET_MEAL",

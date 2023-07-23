@@ -7,7 +7,6 @@ import SearchMeal from "./SearchMeal";
 
 function MealResults() {
   const { meals, loading } = useContext(MealContext);
-  console.log(meals);
 
   if (!loading) {
     return (
