@@ -13,10 +13,11 @@ function Meals() {
     getMeal(params.idMeal);
   }, []);
 
-  const { strInstructions } = meal;
+  const { strInstructions, strMeal } = meal;
 
   return (
     <div>
+      <h2>{strMeal}</h2>
       <p>{strInstructions}</p>
     </div>
   );

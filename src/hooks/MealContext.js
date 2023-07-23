@@ -2,6 +2,8 @@ import { createContext, useEffect, useReducer } from "react";
 import mealReducer from "./MealReducer";
 import axios from "axios";
 
+const MEAL_URL = process.env.REACT_APP_MEAL_URL;
+
 const MealContext = createContext();
 
 export const MealProvider = ({ children }) => {
@@ -20,7 +22,7 @@ export const MealProvider = ({ children }) => {
   const fetchMeal = async () => {
     setLoading();
     axios
-      .get(`${process.env.REACT_APP_MEAL_URL}/search.php?s=chicken`)
+      .get(`${MEAL_URL}/search.php?s=chicken`)
       .then((response) => {
         const data = response.data.meals;
 
@@ -34,10 +36,10 @@ export const MealProvider = ({ children }) => {
       });
   };
 
-  const getMeal = async () => {
+  const getMeal = async (idMeal) => {
     setLoading();
     axios
-      .get(`${process.env.REACT_APP_MEAL_URL}/lookup.php?i=52772`)
+      .get(`${MEAL_URL}/lookup.php?i=${idMeal}`)
       .then((response) => {
         const data = response.data.meals.map((item) =>
           dispatch({
