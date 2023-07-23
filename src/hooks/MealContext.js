@@ -37,15 +37,13 @@ export const MealProvider = ({ children }) => {
   const getMeal = async () => {
     setLoading();
     axios
-      .get(`${process.env.REACT_APP_MEAL_URL}/search.php?s=chicken`)
+      .get(`${process.env.REACT_APP_MEAL_URL}/lookup.php?i=52772`)
       .then((response) => {
-        const data = response.data.meals;
-        const dataList = data.map((item) =>
-          dispatch({
-            type: "GET_MEAL",
-            payload: item,
-          })
-        );
+        const data = response.data.meals.map((item) => item);
+        dispatch({
+          type: "GET_MEAL",
+          payload: data,
+        });
       })
       .catch((error) => {
         console.error("error in fetching  data", error);
