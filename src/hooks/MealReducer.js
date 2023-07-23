@@ -6,6 +6,12 @@ const mealReducer = (state, action) => {
         meals: action.payload,
         loading: false,
       };
+    case "GET_MEAL":
+      return {
+        ...state,
+        meal: action.payload,
+        loading: false,
+      };
     case "SET_LOADING":
       return {
         ...state,
