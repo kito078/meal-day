@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 function Meals() {
   const { meal, getMeal } = useContext(mealReducer);
+  console.log(meal);
 
   const params = useParams();
 

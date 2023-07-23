@@ -40,13 +40,12 @@ export const MealProvider = ({ children }) => {
       .get(`${process.env.REACT_APP_MEAL_URL}/search.php?s=chicken`)
       .then((response) => {
         const data = response.data.meals;
-        const dataList = data.map((item) => item);
-        console.log(dataList);
-
-        dispatch({
-          type: "GET_MEAL",
-          payload: data,
-        });
+        const dataList = data.map((item) =>
+          dispatch({
+            type: "GET_MEAL",
+            payload: item,
+          })
+        );
       })
       .catch((error) => {
         console.error("error in fetching  data", error);
