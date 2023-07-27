@@ -19,7 +19,7 @@ function MealItem({ mealData }) {
 
   return (
     <Link to={`meals/${idMeal}`}>
-      <div class="rounded-extra max-w-xl sm:max-w-md md:max-w-sm mx-auto bg-white rounded-xl shadow-xm overflow-hidden ">
+      {/* <div class="rounded-extra max-w-xl sm:max-w-md md:max-w-sm mx-auto bg-white rounded-xl shadow-xm overflow-hidden ">
         <div class="">
           <div class="md:shrink-0">
             <img
@@ -38,6 +38,18 @@ function MealItem({ mealData }) {
             </span>
           </div>
         </div>
+      </div> */}
+      <div class="relative p-10 rounded-xl bg-purple-700 md:col-span-2">
+        <p class="relative z-10 mt-6 text-xl">
+          I received a job offer mid-course, and the subjects I learned were
+          current, if not more so, in the company I joined. I honestly feel I
+          got every penny's worth.
+        </p>
+
+        <p class="mt-6 opacity-50 line-clamp-6">
+          "I was an EMT for many years before I joined the bootcamp. I've been
+          looking to make a transition and have heard some people who had an
+        </p>
       </div>
     </Link>
   );
