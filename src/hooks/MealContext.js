@@ -19,7 +19,7 @@ export const MealProvider = ({ children }) => {
   //   fetchMeal();
   // }, []);
 
-  const fetchMeal = async (name) => {
+  const fetchMeal = async () => {
     setLoading();
     axios
       .get(`${MEAL_URL}/search.php?s=chicken`)

@@ -3,6 +3,7 @@ import "./MealItem.css";
 import { Link } from "react-router-dom";
 
 function MealItem({ mealData }) {
+  console.log(mealData);
   const { strCategory, strMealThumb, strInstructions, idMeal } = mealData;
 
   //split the sentence into an array of words
@@ -16,6 +17,7 @@ function MealItem({ mealData }) {
 
   //Join the words back into a centence
   const cutSentence = cutWordsArray.join(" ");
+  console.log(cutSentence);
 
   return (
     <Link to={`meals/${idMeal}`}>
