@@ -30,8 +30,8 @@ const items = [
 
 function Orders() {
   return (
-    <div className="bg-softBlueWhite">
-      <div className="container mx-auto text-center my-32">
+    <div className="bg-softBlueWhite pt-44 pb-28">
+      <div className="container mx-auto text-center mt- mb-14">
         <h1 class="mb-6 text-5xl text-slate-700 uppercase font-semibold text-center leading-tight md:text-6xl lg:text-7xl">
           How to Order?
         </h1>
