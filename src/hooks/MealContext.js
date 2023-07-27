@@ -15,11 +15,11 @@ export const MealProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(mealReducer, initialState);
 
-  useEffect(() => {
-    fetchMeal();
-  }, []);
+  // useEffect(() => {
+  //   fetchMeal();
+  // }, []);
 
-  const fetchMeal = async () => {
+  const fetchMeal = async (name) => {
     setLoading();
     axios
       .get(`${MEAL_URL}/search.php?s=chicken`)

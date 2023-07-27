@@ -13,12 +13,19 @@ function Meals() {
     getMeal(params.idMeal);
   }, []);
 
-  const { strInstructions, strMeal } = meal;
+  const { strInstructions, strMeal, strMealThumb, strSource, strYoutube } =
+    meal;
 
   return (
     <div>
+      <img src={strMealThumb} alt="" />
       <h2>{strMeal}</h2>
       <p>{strInstructions}</p>
+
+      <video class="w-full" autoplay controls>
+        <source src={strYoutube} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }
