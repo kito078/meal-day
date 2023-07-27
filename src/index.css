@@ -2,21 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html{
-
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-h2{
-    font-size: 3rem !important;
+h2 {
+  font-size: 3rem !important;
 }
 
-p{
-    font-size: 2rem !important;
+p {
+  font-size: 2rem !important;
 }
 
+body {
+  background: #f2f2f2 !important;
+}
 
-body{
-    background: #f2f2f2 !important;
+.container-one {
+  max-width: 1440px !important;
+  margin: auto !important;
 }

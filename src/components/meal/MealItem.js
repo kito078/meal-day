@@ -39,8 +39,8 @@ function MealItem({ mealData }) {
           </div>
         </div>
       </div> */}
-      <div class="relative p-10 rounded-xl bg-purple-700 md:col-span-2">
-        <p class="relative z-10 mt-6 text-xl">
+      <div class=" p-10 rounded-xl bg-purple-700 md:col-span-2">
+        <p class=" mt-6 text-xl">
           I received a job offer mid-course, and the subjects I learned were
           current, if not more so, in the company I joined. I honestly feel I
           got every penny's worth.
