@@ -42,11 +42,11 @@ function MealItem({ mealData }) {
         </div>
       </div> */}
       <div class=" p-10 rounded-xl bg-purple-700 md:col-span-2">
-        <p class=" mt-6 text-xl">
-          I received a job offer mid-course, and the subjects I learned were
-          current, if not more so, in the company I joined. I honestly feel I
-          got every penny's worth.
-        </p>
+        <img
+          src={strMealThumb}
+          alt=""
+          class="hidden w-full duration-200 md:block group-hover:scale-110"
+        />
 
         <p class="mt-6 opacity-50 line-clamp-6">
           "I was an EMT for many years before I joined the bootcamp. I've been
