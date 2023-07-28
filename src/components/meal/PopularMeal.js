@@ -9,7 +9,7 @@ function PopularMeal() {
 
   return (
     <div className="container-one mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-11 lg:grid-cols-4 gap-4 justify-items-center mx-10 lg:mx-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:grid-cols-4 gap-4 justify-items-center mx-10 lg:mx-0">
         {mapedMeals.map((mealData) => (
           <MealItem key={mealData.idMeal} mealData={mealData} />
         ))}
