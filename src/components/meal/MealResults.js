@@ -10,10 +10,6 @@ function MealResults() {
 
   const name = "chicken";
 
-  useEffect(() => {
-    fetchMeal(name);
-  }, []);
-
   const mapedMeals = meals.slice(0, 4);
 
   if (!loading) {
