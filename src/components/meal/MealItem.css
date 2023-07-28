@@ -1,7 +1,7 @@
 .rounded-extra {
-    border-radius: 5rem !important; 
-   height: 35rem !important;
-  }
-  .rounded-extra img {
-    border-radius: 5rem 5rem 0 0; /* Apply a rounded border to the top corners (adjust the value as needed) */
-  }
+  border-radius: 5rem !important;
+  height: 48rem !important;
+}
+.rounded-extra img {
+  border-radius: 5rem 5rem 0 0; /* Apply a rounded border to the top corners (adjust the value as needed) */
+}

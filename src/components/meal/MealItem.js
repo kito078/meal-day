@@ -41,12 +41,14 @@ function MealItem({ mealData }) {
           </div>
         </div>
       </div> */}
-      <div class="bg-white rounded-extra h-4/5 shadow-xm pb-32  md:col-span-2 text-center">
-        <img
-          src={strMealThumb}
-          alt=""
-          class="w-full h-80 object-cover duration-200 md:block group-hover:scale-110"
-        />
+      <div class="meal-box bg-white rounded-extra h-4/5 shadow-xm pb-32 my-4  md:col-span-2 text-center">
+        <div className="group">
+          <img
+            src={strMealThumb}
+            alt=""
+            class="w-full h-80 object-cover duration-200 md:block group-hover:scale-110"
+          />
+        </div>
         <div className="px-6">
           <div className="my-10">
             <span className="bg-slate-300  text-2xl px-3 py-2 ">
@@ -62,7 +64,7 @@ function MealItem({ mealData }) {
           <div className="my-12">
             <a
               href="#"
-              class="py-5 px-20 text-2xl font-bold text-white bg-red-500 rounded-full lg:py-4 hover:opacity-70"
+              class="py-5 whitespace-nowrap px-20 text-2xl font-bold text-white bg-red-500 rounded-full lg:py-4 hover:opacity-70"
             >
               Get Started
             </a>
