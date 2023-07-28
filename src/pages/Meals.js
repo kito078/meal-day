@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import mealReducer from "../hooks/MealReducer";
 import { useParams } from "react-router-dom";
 import MealContext from "../hooks/MealContext";
-import { fetchMeal } from "../hooks/MealAction";
+import { fetchMeal, getMeal } from "../hooks/MealAction";
 import axios from "axios";
 
 function Meals() {
@@ -13,7 +13,7 @@ function Meals() {
 
   useEffect(() => {
     const getDataMeal = async () => {
-      const getData = await fetchMeal(params.idMeal);
+      const getData = await getMeal(params.idMeal);
 
       dispatch({
         type: "GET_MEALS",
