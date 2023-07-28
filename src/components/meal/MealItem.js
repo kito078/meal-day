@@ -42,7 +42,7 @@ function MealItem({ mealData }) {
         </div>
       </div> */}
       <div class="meal-box bg-white rounded-extra h-4/5 shadow-xm pb-32 my-4  md:col-span-2 text-center">
-        <div className="group">
+        <div className="group group-hover:from-gray-50 group-hover:to-white">
           <img
             src={strMealThumb}
             alt=""
