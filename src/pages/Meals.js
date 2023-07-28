@@ -3,6 +3,7 @@ import mealReducer from "../hooks/MealReducer";
 import { useParams } from "react-router-dom";
 import MealContext from "../hooks/MealContext";
 import { fetchMeal } from "../hooks/MealAction";
+import axios from "axios";
 
 function Meals() {
   const { meal, dispatch } = useContext(MealContext);
@@ -10,16 +11,16 @@ function Meals() {
 
   const params = useParams();
 
-  const getDataMeal = async () => {
-    const getData = await fetchMeal(params.idMeal);
-
-    dispatch({
-      type: "GET_MEALS",
-      payload: getData,
-    });
-  };
-
   useEffect(() => {
+    const getDataMeal = async () => {
+      const getData = await fetchMeal(params.idMeal);
+
+      dispatch({
+        type: "GET_MEALS",
+        payload: getData,
+      });
+    };
+
     // getMeal(params.idMeal);
     getDataMeal();
   }, []);

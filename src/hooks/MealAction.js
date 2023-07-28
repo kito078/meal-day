@@ -1,7 +1,9 @@
+import axios from "axios";
+
 const MEAL_URL = process.env.REACT_APP_MEAL_URL;
 
 export const fetchMeal = async () => {
-  setLoading();
+  //   setLoading();
   axios
     .get(`${MEAL_URL}/search.php?s=chicken`)
     .then((response) => {
