@@ -4,19 +4,19 @@ import MealContext from "./MealContext";
 const MEAL_URL = process.env.REACT_APP_MEAL_URL;
 const { dispatch } = MealContext;
 
-export const fetchMeal = async () => {
+export const fetchMeal = async (food) => {
   //   setLoading();
   axios
-    .get(`${MEAL_URL}/search.php?s=chicken`)
+    .get(`${MEAL_URL}/search.php?s=${food}`)
     .then((response) => {
       const data = response.data.meals;
 
-      dispatch({
-        type: "GET_MEALS",
-        payload: data,
-      });
+      //   dispatch({
+      //     type: "GET_MEALS",
+      //     payload: data,
+      //   });
 
-      //   return data;
+      return data;
     })
     .catch((error) => {
       console.error("error in fetching  data", error);

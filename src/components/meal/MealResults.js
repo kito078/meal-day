@@ -9,17 +9,17 @@ import { fetchMeal } from "../../hooks/MealAction";
 function MealResults() {
   const { meals, loading, dispatch } = useContext(MealContext);
 
-  // useEffect(() => {
-  //   const fetchDataMeal = async () => {
-  //     const fetchData = await fetchMeal();
+  useEffect(() => {
+    const fetchDataMeal = async () => {
+      const fetchData = await fetchMeal("chicken");
 
-  //     dispatch({
-  //       type: "GET_MEALS",
-  //       payload: fetchData,
-  //     });
-  //   };
-  //   fetchDataMeal();
-  // }, []);
+      dispatch({
+        type: "GET_MEALS",
+        payload: fetchData,
+      });
+    };
+    fetchDataMeal();
+  }, []);
 
   const mapedMeals = meals.slice(0, 4);
 
