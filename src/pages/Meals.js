@@ -2,15 +2,26 @@ import React, { useContext, useEffect } from "react";
 import mealReducer from "../hooks/MealReducer";
 import { useParams } from "react-router-dom";
 import MealContext from "../hooks/MealContext";
+import { fetchMeal } from "../hooks/MealAction";
 
 function Meals() {
-  const { meal, getMeal } = useContext(MealContext);
+  const { meal, dispatch } = useContext(MealContext);
   console.log(meal);
 
   const params = useParams();
 
+  const getDataMeal = async () => {
+    const getData = await fetchMeal(params.idMeal);
+
+    dispatch({
+      type: "GET_MEALS",
+      payload: getData,
+    });
+  };
+
   useEffect(() => {
-    getMeal(params.idMeal);
+    // getMeal(params.idMeal);
+    getDataMeal();
   }, []);
 
   const { strInstructions, strMeal, strMealThumb, strSource, strYoutube } =
