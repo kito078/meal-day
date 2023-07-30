@@ -21,7 +21,6 @@ function Meals() {
       });
     };
 
-    // getMeal(params.idMeal);
     getDataMeal();
   }, []);
 
