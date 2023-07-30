@@ -2,22 +2,26 @@ import React, { useContext, useEffect, useState } from "react";
 import { PuffLoader } from "react-spinners";
 import MealItem from "./MealItem";
 import MealContext from "../../hooks/MealContext";
-import { fetchMeal } from "../../hooks/MealAction";
+// import { fetchMeal } from "../../hooks/MealAction";
 
 function MealResults() {
   const { meals, loading, dispatch } = useContext(MealContext);
 
-  useEffect(() => {
-    const fetchDataMeal = async () => {
-      const fetchData = await fetchMeal();
+  // useEffect(() => {
+  //   fetchMeal();
+  // }, []);
 
-      dispatch({
-        type: "GET_MEALS",
-        payload: fetchData,
-      });
-    };
-    fetchDataMeal();
-  }, []);
+  // useEffect(() => {
+  //   const fetchDataMeal = async () => {
+  //     const fetchData = await fetchMeal();
+
+  //     dispatch({
+  //       type: "GET_MEALS",
+  //       payload: fetchData,
+  //     });
+  //   };
+  //   fetchDataMeal();
+  // }, []);
 
   const mapedMeals = meals.slice(0, 4);
 

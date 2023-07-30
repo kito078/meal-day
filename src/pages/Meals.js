@@ -6,23 +6,27 @@ import { fetchMeal, getMeal } from "../hooks/MealAction";
 import axios from "axios";
 
 function Meals() {
-  const { meal, dispatch } = useContext(MealContext);
+  const { meal, dispatch, getMeal } = useContext(MealContext);
   console.log(meal);
 
   const params = useParams();
 
   useEffect(() => {
-    const getDataMeal = async () => {
-      const getData = await getMeal(params.idMeal);
-
-      dispatch({
-        type: "GET_MEALS",
-        payload: getData,
-      });
-    };
-
-    getDataMeal();
+    getMeal(params.login);
   }, []);
+
+  // useEffect(() => {
+  //   const getDataMeal = async () => {
+  //     const getData = await getMeal(params.idMeal);
+
+  //     dispatch({
+  //       type: "GET_MEALS",
+  //       payload: getData,
+  //     });
+  //   };
+
+  //   getDataMeal();
+  // }, []);
 
   const { strInstructions, strMeal, strMealThumb, strSource, strYoutube } =
     meal;
@@ -31,12 +35,12 @@ function Meals() {
     <div>
       <img src={strMealThumb} alt="" />
       <h2>{strMeal}</h2>
-      <p>{strInstructions}</p>
+      <p>{strInstructions}dddd</p>
 
-      <video class="w-full" autoplay controls>
+      {/* <video class="w-full" autoplay controls>
         <source src={strYoutube} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
     </div>
   );
 }

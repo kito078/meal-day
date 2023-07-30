@@ -1,28 +1,34 @@
-import axios from "axios";
-import MealContext from "./MealContext";
+// import axios from "axios";
+// import MealContext from "./MealContext";
 
-const MEAL_URL = process.env.REACT_APP_MEAL_URL;
+// const MEAL_URL = process.env.REACT_APP_MEAL_URL;
+// // const { dispatch } = MealContext;
 
-export const fetchMeal = async () => {
-  axios
-    .get(`${MEAL_URL}/search.php?s=chicken`)
-    .then((response) => {
-      const data = response.data.meals;
+// // export const fetchMeal = async () => {
+// //   axios
+// //     .get(`${MEAL_URL}/search.php?s=chicken`)
+// //     .then((response) => {
+// //       const data = response.data.meals;
 
-      return data;
-    })
-    .catch((error) => {
-      console.error("error in fetching  data", error);
-    });
-};
+// //       dispatch({
+// //         type: "GET_MEALS",
+// //         payload: data,
+// //       });
 
-export const getMeal = async (idMeal) => {
-  axios
-    .get(`${MEAL_URL}/lookup.php?i=${idMeal}`)
-    .then((response) => {
-      const data = response.data.meals.map((item) => item);
-    })
-    .catch((error) => {
-      console.error("error in fetching  data", error);
-    });
-};
+// //       // return data;
+// //     })
+// //     .catch((error) => {
+// //       console.error("error in fetching  data", error);
+// //     });
+// // };
+
+// export const getMeal = async (idMeal) => {
+//   axios
+//     .get(`${MEAL_URL}/lookup.php?i=${idMeal}`)
+//     .then((response) => {
+//       const data = response.data.meals.map((item) => item);
+//     })
+//     .catch((error) => {
+//       console.error("error in fetching  data", error);
+//     });
+// };

@@ -7,21 +7,25 @@ import Order from "./Order";
 
 const items = [
   {
+    id: "ws",
     img: Wifi,
     num: "1",
     text: "Choose your location",
   },
   {
+    id: "wsds",
     img: Foke,
     num: "2",
     text: "Choose restaurant",
   },
   {
+    id: "wsj",
     img: Cafe,
     num: "3",
     text: "Make your order",
   },
   {
+    id: "wps",
     img: Skuter,
     num: "4",
     text: "Food is on the way",
@@ -39,7 +43,7 @@ function Orders() {
       </div>
       <div className=" mx-auto text-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ">
         {items.map((item) => (
-          <Order item={item} />
+          <Order key={item.id} item={item} />
         ))}
       </div>
     </div>
