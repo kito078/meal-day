@@ -4,27 +4,27 @@ import MealContext from "./MealContext";
 const MEAL_URL = process.env.REACT_APP_MEAL_URL;
 const { dispatch } = MealContext;
 
-// export const fetchMeal = async (food) => {
-//   //   setLoading();
-//   const params = new URLSearchParams({
-//     q: food,
-//   });
-//   axios
-//     .get(`${MEAL_URL}/search.php?s=${params}`)
-//     .then((response) => {
-//       const data = response.data.meals;
+export const fetchMeal = async () => {
+  //   setLoading();
+  // const params = new URLSearchParams({
+  //   q: food,
+  // });
+  axios
+    .get(`${MEAL_URL}/search.php?s=chicken`)
+    .then((response) => {
+      const data = response.data.meals;
 
-//       //   dispatch({
-//       //     type: "GET_MEALS",
-//       //     payload: data,
-//       //   });
+      //   dispatch({
+      //     type: "GET_MEALS",
+      //     payload: data,
+      //   });
 
-//       return data;
-//     })
-//     .catch((error) => {
-//       console.error("error in fetching  data", error);
-//     });
-// };
+      return data;
+    })
+    .catch((error) => {
+      console.error("error in fetching  data", error);
+    });
+};
 
 export const getMeal = async (idMeal) => {
   axios
