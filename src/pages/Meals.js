@@ -12,7 +12,7 @@ function Meals() {
   const params = useParams();
 
   useEffect(() => {
-    getMeal(params.login);
+    getMeal(params.idMeal);
   }, []);
 
   // useEffect(() => {
