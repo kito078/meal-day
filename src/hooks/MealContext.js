@@ -15,22 +15,26 @@ export const MealProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(mealReducer, initialState);
 
-  // const fetchMeal = async () => {
-  //   setLoading();
-  //   axios
-  //     .get(`${MEAL_URL}/search.php?s=chicken`)
-  //     .then((response) => {
-  //       const data = response.data.meals;
+  useEffect(() => {
+    fetchMeal();
+  }, []);
 
-  //       dispatch({
-  //         type: "GET_MEALS",
-  //         payload: data,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.error("error in fetching  data", error);
-  //     });
-  // };
+  const fetchMeal = async () => {
+    setLoading();
+    axios
+      .get(`${MEAL_URL}/search.php?s=chicken`)
+      .then((response) => {
+        const data = response.data.meals;
+
+        dispatch({
+          type: "GET_MEALS",
+          payload: data,
+        });
+      })
+      .catch((error) => {
+        console.error("error in fetching  data", error);
+      });
+  };
 
   // const getMeal = async (idMeal) => {
   //   setLoading();
@@ -58,9 +62,10 @@ export const MealProvider = ({ children }) => {
     <MealContext.Provider
       value={{
         ...state,
-        // meals: state.meals,
+        meals: state.meals,
         // loading: state.loading,
         // meal: state.meal,
+        fetchMeal,
         dispatch,
       }}
     >
