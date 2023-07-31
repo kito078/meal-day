@@ -48,10 +48,12 @@ export default function TestimonialSlider() {
                   customers a really easy way to order, pay and get their food
                   so they can beat the line and beat that lunch rush."
                 </p>
-                <div className="object-contain w-36 h-36">
+                <div className="object-contain w-32 h-32">
                   <img src={Person} alt="" className="rounded-full w-20" />
                 </div>
-                <span className="mt-10">Mary Linkoln 2 days ago</span>
+                <span className="mt-10 text-red-400 text-2xl">
+                  Mary Linkoln 2 days ago
+                </span>
               </div>
             </div>
           </div>
