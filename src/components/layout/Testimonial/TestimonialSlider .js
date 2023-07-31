@@ -11,7 +11,8 @@ import "swiper/css/navigation";
 //import './styles.css';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
+// import { Autoplays, Pagination, Navigation } from "swiper/modules";
 
 export default function TestimonialSlider() {
   return (
@@ -19,15 +20,16 @@ export default function TestimonialSlider() {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          //   delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Pagination, Navigation]}
+        // modules={[Autoplays, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -35,7 +37,9 @@ export default function TestimonialSlider() {
             <img src={Bug} alt="Image" class="w-full h-auto" />
             <div class="absolute inset-0 bg-black opacity-60"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
-              <h2 class="text-4xl font-bold">Clients About Us </h2>
+              <h3 class="text-5xl md:text-8xl font-bold mb-10">
+                Clients About Us{" "}
+              </h3>
               <p class="text-lg">Testimonials</p>
             </div>
           </div>
