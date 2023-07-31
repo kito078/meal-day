@@ -4,6 +4,7 @@ import PopularMeal from "../components/meal/PopularMeal";
 import UpperSection from "../components/layout/UpperSection";
 import Popular from "../components/layout/Popular";
 import Orders from "../components/layout/Orders";
+import TestimonialSlider from "../components/layout/Testimonial/TestimonialSlider ";
 
 function Home() {
   return (
@@ -13,6 +14,8 @@ function Home() {
       <Orders />
       <Popular />
       <PopularMeal />
+      {/* Testimonial */}
+      <TestimonialSlider />
     </div>
   );
 }
