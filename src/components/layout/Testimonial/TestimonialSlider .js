@@ -1,43 +1,66 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./TestimonialSlider.css";
+import Bug from "../../../images/01.jpg";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "John Doe",
-    message: "This is an amazing testimonial 1.",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    message: "This is an amazing testimonial 2.",
-  },
-  // Add more testimonials here as needed
-];
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+//import './styles.css';
 
-const TestimonialSlider = () => {
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-  useEffect(() => {
-    const sliderInterval = setInterval(() => {
-      setCurrentTestimonialIndex(
-        (prevIndex) => (prevIndex + 1) % testimonials.length
-      );
-    }, 5000); // Change slide every 5 seconds
-
-    return () => {
-      clearInterval(sliderInterval);
-    };
-  }, []);
-
+export default function TestimonialSlider() {
   return (
-    <div className="testimonial-slider">
-      <div className="testimonial">
-        <h3>{testimonials[currentTestimonialIndex].name}</h3>
-        <p>{testimonials[currentTestimonialIndex].message}</p>
-      </div>
-    </div>
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          //   delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div class="relative h-80">
+            <img src={Bug} alt="Image" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+              <h2 class="text-4xl font-bold">Clients About Us </h2>
+              <p class="text-lg">Testimonials</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="relative h-80">
+            <img src={Bug} alt="Image" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+              <h2 class="text-4xl font-bold">Your Text Here</h2>
+              <p class="text-lg">Additional text or description goes here.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div class="relative h-80">
+            <img src={Bug} alt="Image" class="w-full h-auto" />
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+              <h2 class="text-4xl font-bold">Your Text Here</h2>
+              <p class="text-lg">Additional text or description goes here.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
-};
-
-export default TestimonialSlider;
+}
