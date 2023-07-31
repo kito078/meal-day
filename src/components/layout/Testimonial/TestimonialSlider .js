@@ -34,23 +34,24 @@ export default function TestimonialSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="relative h-3/6">
+          <div className="relative testimonial-container">
             <img src={Bug} alt="Image" className="w-full h-auto" />
             <div className="absolute inset-0 bg-black opacity-60"></div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-              <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 mt-10 lg:mt-32">
+              <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 mt-10 lg:mt-12">
                 Clients About Us{" "}
               </h3>
               <p class="text-lg">Testimonials</p>
-              <div className="w-8/12">
+              <div className="w-8/12 flex flex-col items-center">
                 <p>
                   "We are a very busy restaurant and Foody 24/7 gives our
                   customers a really easy way to order, pay and get their food
                   so they can beat the line and beat that lunch rush."
                 </p>
-                <div className="w-40">
+                <div className="object-contain w-36 h-36">
                   <img src={Person} alt="" className="rounded-full w-20" />
                 </div>
+                <span className="mt-10">Mary Linkoln 2 days ago</span>
               </div>
             </div>
           </div>

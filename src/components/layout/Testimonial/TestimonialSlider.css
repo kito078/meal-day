@@ -20,3 +20,6 @@
   height: 100%;
   object-fit: cover;
 }
+.testimonial-container {
+  height: 50rem;
+}
