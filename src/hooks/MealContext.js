@@ -36,30 +36,17 @@ export const MealProvider = ({ children }) => {
       });
   };
 
-  // const getMeal = async (idMeal) => {
-  //   setLoading();
-  //   axios
-  //     .get(`${MEAL_URL}/lookup.php?i=${idMeal}`)
-  //     .then((response) => {
-  //       const data = response.data.meals.map((item) =>
-  //         dispatch({
-  //           type: "GET_MEAL",
-  //           payload: item,
-  //         })
-  //       );
-  //       console.log(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("error in fetching  data", error);
-  //     });
-  // };
-
   const getMeal = async (idMeal) => {
     setLoading();
     axios
       .get(`${MEAL_URL}/lookup.php?i=${idMeal}`)
       .then((response) => {
-        const data = response.data.meals.map((item) => ({ ...item }));
+        const data = response.data.meals.map((item) =>
+          dispatch({
+            type: "GET_MEAL",
+            payload: item,
+          })
+        );
         console.log(data);
       })
       .catch((error) => {

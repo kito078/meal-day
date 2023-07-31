@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import SearchMeal from "../meal/SearchMeal";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ function Navbar() {
             <h5 id="logo">MealsDay</h5>
           </Link>
         </div>
+        <SearchMeal />
         {/* Menu Items */}
         <div className="hidden items-center space-x-10 uppercase text-grayisBlue md:flex">
           <Link to="/" className="tracking-widest hover:text-softRed">

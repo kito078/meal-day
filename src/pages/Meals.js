@@ -9,7 +9,6 @@ function Meals() {
   const { meal, dispatch, getMeal } = useContext(MealContext);
   //console.log(meal);
 
-  const data = response.data.meals.map((item) => item.name);
   //console.log(data);
 
   const params = useParams();
