@@ -12,8 +12,8 @@ import "swiper/css/navigation";
 //import './styles.css';
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
-// import { Autoplays, Pagination, Navigation } from "swiper/modules";
+// import { Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export default function TestimonialSlider() {
   return (
@@ -21,16 +21,16 @@ export default function TestimonialSlider() {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        // autoplay={{
-        //   //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
-        // modules={[Autoplays, Pagination, Navigation]}
+        // modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -73,15 +73,15 @@ export default function TestimonialSlider() {
               </h3>
               <div className="mx-8 md:w-9/12 flex flex-col items-center mt-28 md:mt-32">
                 <p className="mb-12">
-                  "We are a very busy restaurant and Foody 24/7 gives our
-                  customers a really easy way to order, pay and get their food
-                  so they can beat the line and beat that lunch rush."
+                  "Fooddy 24/7 has the best application for online ordering.
+                  Fantastic choices of restaurant, low delivery price and
+                  customers service."
                 </p>
                 <div className="object-contain w-32 h-32">
                   <img src={Person} alt="" className="rounded-full w-20" />
                 </div>
                 <span className="mt-10 text-red-400 text-2xl">
-                  Mary Linkoln 2 days ago
+                  Nate Wilson 3 days ago
                 </span>
               </div>
             </div>
@@ -100,9 +100,9 @@ export default function TestimonialSlider() {
               </h3>
               <div className="mx-8 md:w-9/12 flex flex-col items-center mt-28 md:mt-32">
                 <p className="mb-12">
-                  "We are a very busy restaurant and Foody 24/7 gives our
-                  customers a really easy way to order, pay and get their food
-                  so they can beat the line and beat that lunch rush."
+                  "Your website was very easy to navigate, service was prompt
+                  and staff was very pleasant. I will definately use your
+                  service again, and I have already recommended it to a friend."
                 </p>
                 <div className="object-contain w-32 h-32">
                   <img src={Person} alt="" className="rounded-full w-20" />
